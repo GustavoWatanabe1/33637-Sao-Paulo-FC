@@ -1,0 +1,329 @@
+*{
+font-family: sans-serif;
+margin: 0;
+padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+.elenco{
+    margin-top: 100px;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+#elenco2{
+color: rgb(185, 0, 0);
+}
+
+.transicao {
+    transition: transform 0.5s ease-in-out;
+  }
+
+.espaco{
+padding: 100px;
+border-bottom: 2px solid rgb(185, 185, 185);
+opacity: 0.5;
+}
+
+
+#container{
+    position: relative;
+    display: grid;
+    place-items: center;
+    height: 60vh;
+}
+
+#slider-container{
+    height: 500px;
+    width: 85vw;
+    max-width: 1400px;
+    position: relative;
+    overflow: hidden;
+}
+
+#slider-container .btn{
+    padding: 5px;
+    position: absolute;
+    top: calc(50% - 30px);
+    height: 15px;
+    width: 15px;
+    border-left: 8px solid #696969;
+    border-top: 8px solid #696969;
+}
+#slider-container .btn:hover{
+    transform: scale(1.2);
+    border-left: 8px solid rgb(153, 1, 1);
+    border-top: 8px solid rgb(153, 1, 1);
+    transition: 0.5s;
+}
+#slider-container .btn.inactive{
+    border-color: #282828;
+}
+#slider-container .btn:first-of-type{
+    transform: rotate(-45deg);
+    left: 10px;
+}
+#slider-container .btn:last-of-type{
+    transform: rotate(135deg);
+    right: 10px;
+}
+#slider-container #slider{
+    display: flex;
+    width: 1200%;
+    height:  100%;
+    transition: all .5s;
+}
+#slider-container #slider .slide{
+    height: 100%;
+    margin: auto 10px;
+    background-color: black;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px 2px white, -2px -2px 4px 2px white;
+    display: grid;
+    place-items: center;
+}
+#slider-container #slider .slide img{
+display: block;
+border-radius: 20px;
+height: 408px;
+width: 280px;
+}
+#slider-container #slider .slide span{
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold; 
+    font-family: "Oswald";
+    }
+
+    .numero{
+    margin-top: 20px;
+    margin-left: 10px;
+    color: grey;
+    }
+
+    .jogadores{
+        margin-left: 10px;
+        text-align: left;
+        font-family: "Oswald";
+        letter-spacing: 1px;
+    }
+    
+#rodapé{
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #000;
+}
+
+#rodapé p{
+    text-align: center;
+    font-weight: bold;
+}
+
+a{
+color: #fff;
+text-decoration: none;
+transition: 0.3s;
+font-weight: bold;
+}
+
+#titulo {
+    margin-top: 100px;
+    margin-left: 20px;
+    padding: 5px;
+    background-color: #fff;
+    padding-bottom: 10px;
+    font-weight: bold;
+
+}
+
+p {
+    color: rgb(119, 119, 119);
+    padding-right: 20px;
+    font-family: sans-serif;
+    white-space: pre-wrap;
+    margin-left: 30px;
+    text-align: justify; /* Texto justificado */
+    line-height: 1.8; /* Espaçamento entre linhas */
+}
+
+
+a:hover{
+padding: 5px;
+border-bottom: 2px #fff solid;
+color: rgb(185, 0, 0);
+}
+
+header::before,
+header::after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 100%;
+}
+
+header::before {
+    background-color: rgb(153, 1, 1);
+    top: 0;
+    left: 0;
+}
+
+header::after {
+    background-color: white;
+    top: 5px; /* Posiciona a faixa branca 5px abaixo do topo */
+    left: 0;
+}
+
+header{
+position: fixed;
+top: 0;
+left: 0;
+width: 100%; /* Garante que a barra ocupe toda a largura da tela */
+background-color: #000; /* Cor de fundo da barra (preto) */
+color: #fff; /* Cor do texto (branco) */
+padding: 10px 0; /* Adiciona espaço interno à barra */
+z-index: 100; /* Garante que a barra fique na frente de outros elementos */
+}
+
+.logo img {
+    height: 60px; /* Ajuste o tamanho da logo */
+    position: absolute;
+    top: 15px; /* Ajuste a posição vertical */
+    left: 70px; /* Ajuste a posição horizontal */
+}
+
+nav{
+
+display: flex;
+justify-content: space-around;
+align-items: center;
+font-family: Arial, Helvetica, sans-serif;
+background: #000;
+height: 8vh;
+padding: 5px;
+}
+
+main{
+background: url(EstadioSaoPaulo.jpg) no-repeat center center;
+background-size: cover;
+height: 100vh;
+}
+
+.nav-list{
+list-style: none;
+display: flex;
+}
+
+.nav-list li{
+letter-spacing: 3px;
+margin-left: 32px;
+}
+
+
+.mobile-menu{
+display: none;
+cursor: pointer;
+}
+
+.mobile-menu div{
+width: 32px;
+height: 2px;
+background: #fff;
+margin: 8px;
+transition: 0.3s;
+}
+@media only screen and (min-width:1100px){
+    #slider-container #slider .slide{
+        width: calc(2.5% - 20px);        
+    }
+}
+@media only screen and  (max-width: 1100px){
+    #slider-container #slider .slide{
+        width: calc(3.333333% - 20px);
+    }
+    
+}
+@media only screen and  (max-width: 900px){
+    #slider-container #slider .slide{
+        width: calc(5% - 20px);
+    }
+}
+@media only screen and  (max-width: 550px){
+    #slider-container #slider .slide{
+        width: calc(10% - 20px);
+    }
+}
+
+@media (max-width:999px) {
+    body{
+    overflow-x: hidden;
+    }
+.nav-list {
+position: absolute;
+top: 10vh;
+right: 0;
+width: 50vw;
+height: 92vh;
+background: #000;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+transform: translateX(100%);
+transition: transform 0.5s ease-in-out;
+}
+.nav-list li{
+margin-left: 0;
+opacity: 0;
+}
+.mobile-menu{
+display: block;
+}
+}
+
+#monumento img{
+    background-image: linear-gradient(30deg,black, white,  rgb(185, 0, 0));
+    margin-left: 20px;
+    border-radius: 5px; /* Cantos arredondados */
+    padding: 10px; /* Espaço interno entre a imagem e a moldura */
+    padding: 10px;
+    margin-top: 100px;
+    margin-right: 20px;
+    float: right;
+    height: auto;
+    width: 300px;
+      }
+      .logo img {
+        height: 70px; /* Ajuste o tamanho da logo */
+        position: absolute;
+        top: 20px; /* Ajuste a posição vertical */
+        left: 70px; /* Ajuste a posição horizontal */
+    }
+
+.nav-list.active{
+transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+from{
+    opacity: 0;
+    transform: translateX(50px);
+}
+to
+{
+opacity: 1;
+transform: translateX(0);
+}
+}
+
+.mobile-menu.active .line1 {
+transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+transform: rotate(45deg) translate(-5px, -7px);
+}
