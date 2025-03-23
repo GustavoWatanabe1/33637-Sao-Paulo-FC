@@ -40,4 +40,3 @@ const mobileNavBar = new MobileNavBar(
 ".mobile-menu",".nav-list",".nav-list li"
 );
 
-mobileNavBar.init();
